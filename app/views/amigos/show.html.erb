@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @amigo.nombre %> <%= @amigo.apellido %></h1>
+<p>
+  <strong>Email:</strong>
+  <%= @amigo.email %>
+</p>
+<p>
+  <strong>Telefono:</strong>
+  <%= @amigo.telefono %>
+</p>
+<p>
+  <strong>Twitter:</strong>
+  <%= @amigo.twitter %>
+</p>
+  <%= link_to 'Editar', edit_amigo_path(@amigo), class:"btn btn-secondary" %>
+  <%= link_to 'Regresar', amigos_path, class:"btn btn-secondary" %>
+</div>
+
+
+
+
+
