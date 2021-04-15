@@ -1,25 +1,34 @@
-# README
+# _RCRUD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Version Alpha 0.1
 
-Things you may want to cover:
+This is another CRUD App by using Ruby on Rails as Framwork
 
-* Ruby version
+### Used Libraries: 
 
-* System dependencies
+* Ruby version: 3.0.0p0
 
-* Configuration
+* Rails 6.1.3.1
 
-* Database creation
+* Postgresql 1.1
 
-* Database initialization
+* Puma 5.0
 
-* How to run the test suite
+* Bcrypt 3.1.16
 
-* Services (job queues, cache servers, search engines, etc.)
+* Haml 5.1
 
-* Deployment instructions
+### As per request, not using:
 
-* ...
-# _rcrud
+* Devise
+
+
+## DB Instructions:
+
+There are two tables:
+
+- Table Amigos scaffold model:
+`rails g model amigos nombre apellido email telefono twitter`
+
+- Table Users model:
+`rails g model user name email password_digest`
