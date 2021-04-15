@@ -1,0 +1,12 @@
+<h1>Ingresar</h1>
+<%= form_for :login do |f| %>
+  <div>
+    <%= f.text_field :email, placeholder:"Email", autofocus: true %>
+  </div><br/>
+  <div>
+    <%= f.password_field :password, placeholder:"Contraseña" %>
+  </div><br/>
+  <div>
+    <%= f.submit "Iniciar Sesión", class:"btn btn-secondary" %>
+  </div>
+<% end %>

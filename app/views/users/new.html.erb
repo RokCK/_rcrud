@@ -1,0 +1,19 @@
+<h1>Registro</h1>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder:"Nombre", autofocus: true %>
+  </div><br/>
+  <div>
+    <%= f.text_field :email, placeholder:"Email" %>
+  </div><br/>
+  <div>
+    <%= f.password_field :password, placeholder:"Contraseña" %>
+  </div><br/>
+  <div>
+    <%= f.password_field :password_confirmation, placeholder:"Confirmar Contraseña" %>
+  </div><br/>
+  <div>
+    <%= f.submit "Enviar Registro" %>
+  </div>
+<% end %>
