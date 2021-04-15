@@ -1,0 +1,16 @@
+%h1 Registro
+= form_for @user do |f|
+  %div
+    = f.text_field :name, placeholder:"Nombre", autofocus: true
+  %br/
+  %div
+    = f.text_field :email, placeholder:"Email"
+  %br/
+  %div
+    = f.password_field :password, placeholder:"Contraseña"
+  %br/
+  %div
+    = f.password_field :password_confirmation, placeholder:"Confirmar Contraseña"
+  %br/
+  %div
+    = f.submit "Enviar Registro", class:"btn btn-secondary"

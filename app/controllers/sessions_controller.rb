@@ -14,17 +14,16 @@ class SessionsController < ApplicationController
         if user && user.authenticate(params[:login][:password]) 
           # Save the user.id in that user's session cookie:
           session[:user_id] = user.id.to_s
-          redirect_to root_path, notice: 'Bienvenido ' + user.name
+          redirect_to amigos_path, notice: 'Bienvenido ' + user.name
         else
           # if email or password incorrect, re-render login page:
-          flash.now.alert = "Email o contraseña errónea, intenta nuevamente"
-          render :new
+          redirect_to login_path, notice: "Email o contraseña errónea, intenta nuevamente"
         end
       end
     
       def destroy
         # delete the saved user_id key/value from the cookie:
         session.delete(:user_id)
-        redirect_to login_path, notice: "Adiós..."
+        redirect_to home_about_path, notice: "Adiós..."
       end
 end

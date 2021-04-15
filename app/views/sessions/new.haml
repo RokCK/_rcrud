@@ -1,0 +1,10 @@
+%h1 Entrar
+= form_for :login do |f|
+  %div
+    = f.text_field :email, placeholder:"Email", autofocus: true
+  %br/
+  %div
+    = f.password_field :password, placeholder:"Contraseña"
+  %br/
+  %div
+    = f.submit "Iniciar Sesión", class:"btn btn-secondary"

@@ -1,0 +1,22 @@
+%table.table.table-dark
+  %thead
+    %tr
+      %th Nombre
+      %th Apellido
+      %th Email
+      %th Telefono
+      %th Twitter
+      %th{:colspan => "3"}
+  %tbody
+    - @amigos.each do |amigo|
+      %tr
+        %td= amigo.nombre
+        %td= amigo.apellido
+        %td= amigo.email
+        %td= amigo.telefono
+        %td= amigo.twitter
+        %td= link_to 'Mostrar', amigo, class:"btn btn-secondary"
+        %td= link_to 'Editar', edit_amigo_path(amigo), class:"btn btn-secondary"
+        %td= link_to 'Eliminar', amigo, method: :delete, data: { confirm: 'Estás seguro?' }, class:"btn btn-secondary"
+%br/
+= link_to 'Agregar Amigo', new_amigo_path, class:"btn btn-secondary"

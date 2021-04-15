@@ -1,0 +1,26 @@
+= form_with(model: amigo) do |form|
+  - if amigo.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(amigo.errors.count, "error")
+        prohibited this amigo from being saved:
+      %ul
+        - amigo.errors.each do |error|
+          %li= error.full_message
+  .field.form-group
+    = form.text_field :nombre, placeholder:"Nombre", class:"form-control"
+  %br/
+  .field.form-group
+    = form.text_field :apellido, placeholder:"Apellido", class:"form-control"
+  %br/
+  .field.form-group
+    = form.text_field :email, placeholder:"Email", class:"form-control"
+  %br/
+  .field.form-group
+    = form.text_field :telefono, placeholder:"Teléfono", class:"form-control"
+  %br/
+  .field.form-group
+    = form.text_field :twitter, placeholder:"Twitter", class:"form-control"
+  %br/
+  .actions
+    = form.submit class:"btn btn-secondary"

@@ -1,0 +1,21 @@
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    = link_to '_rcrud', root_path, class:"navbar-brand"
+    %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      %ul.navbar-nav
+        %li.nav-item
+          = link_to 'Acerca', home_about_path, class:"nav-link"
+        - if current_user
+          %li.nav-item
+            = link_to 'Ver Amigos', amigos_path, class:"nav-link"
+          %li.nav-item
+            = link_to 'Agregar Amigo', new_amigo_path, class:"nav-link"
+          %li.nav-item
+            = link_to 'Salir', logout_path, method: :delete, class:"nav-link"
+        - else
+          %li.nav-item
+            = link_to 'Entrar', login_path, class:"nav-link"
+          %li.nav-item
+            = link_to 'Registro', new_user_path, class:"nav-link"

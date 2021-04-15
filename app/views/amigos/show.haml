@@ -1,0 +1,15 @@
+.jumbotron
+  %h1.display-4
+    = @amigo.nombre
+    = @amigo.apellido
+  %p
+    %strong Email:
+    = @amigo.email
+  %p
+    %strong Telefono:
+    = @amigo.telefono
+  %p
+    %strong Twitter:
+    = @amigo.twitter
+  = link_to 'Editar', edit_amigo_path(@amigo), class:"btn btn-secondary"
+  = link_to 'Regresar', amigos_path, class:"btn btn-secondary"
